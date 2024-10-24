@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INNOVACION</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eef;
+        }
+        header {c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #34495e;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .section {
+            flex: 1;
+            margin: 10px;
+            min-width: 300px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        .section img {
+            width: 100%;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .content {
+            padding: 20px;
+        }
+        h2 {
+            color: #2980b9;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ECOS DE INNOVACION</h1>
+        <p>Explorando el mundo de la ciencia, la tecnología y la cultura</p>
+    </header>
+
+    <nav>
+        <a href="#tecnologia">Tecnología</a>
+        <a href="#salud">Salud</a>
+        <a href="#viajes">Viajes</a>
+        <a href="#cultura">Cultura</a>
+    </nav>
+
+    <div class="container">
+        <div class="section" id="tecnologia">
+            <img src="https://via.placeholder.com/600x300" alt="Tecnología">
+            <div class="content">
+                <h2>Tendencias en Tecnología</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan arcu. Sed sit amet libero nisl.</p>
+                <p>Ut ut ligula sed elit auctor malesuada. Nulla facilisi. Curabitur ac dui magna.</p>
+            </div>
+        </div>
+
+        <div class="section" id="salud">
+            <img src="https://via.placeholder.com/600x300" alt="Salud">
+            <div class="content">
+                <h2>Salud y Bienestar</h2>
+                <p>Etiam vel ligula at nisi laoreet interdum. Nulla facilisi. Sed consequat, metus in pharetra ullamcorper.</p>
+                <p>Aenean nec lacinia libero. Nunc tristique nec lorem non hendrerit.</p>
+            </div>
+        </div>
+
+        <div class="section" id="viajes">
+            <img src="https://via.placeholder.com/600x300" alt="Viajes">
+            <div class="content">
+                <h2>Viajes y Aventuras</h2>
+                <p>Aenean nec lacinia libero. Integer euismod, lorem in euismod cursus, felis purus lacinia nisl.</p>
+                <p>Nullam interdum, justo ac scelerisque sollicitudin, justo metus euismod velit, at tristique nunc orci vel nunc.</p>
+            </div>
+        </div>
+
+        <div class="section" id="cultura">
+            <img src="https://via.placeholder.com/600x300" alt="Cultura">
+            <div class="content">
+                <h2>Cultura y Sociedad</h2>
+                <p>Fusce in ligula in turpis faucibus egestas. Vivamus volutpat ligula et turpis fermentum, a gravida lacus fermentum.</p>
+                <p>Phasellus id est vehicula, feugiat justo at, tempus libero.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Revista Compleja. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Imágenes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        #imagePreview {
+            margin-top: 20px;
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #2980b9;
+            border-radius: 5px;
+            display: none; /* Oculto por defecto */
+        }
+    </style>
+</head>
+<body>
+    <h1>Subir Imagen</h1>
+    <input type="file" id="fileInput" accept="image/*">
+    <img id="imagePreview" alt="Vista previa de la imagen">
+
+    <script>
+        // script.js
+
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                const imgElement = document.getElementById('imagePreview');
+                imgElement.src = e.target.result; // Establece la fuente de la imagen
+                imgElement.style.display = 'block'; // Muestra la imagen
+            }
+
+            if (file) {
+                reader.readAsDataURL(file); // Lee el archivo como una URL de datos
+            }
+        });
+    </script>
+</body>
+</html>
